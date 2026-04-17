@@ -7,6 +7,7 @@ import Funcionarios from './pages/Funcionarios'
 import Folha from './pages/Folha'
 import Ocorrencias from './pages/Ocorrencias'
 import Assistente from './pages/Assistente'
+import SeedData from './pages/SeedData'
 import { MeuDia, Headcount, Relatorios } from './pages/Others'
 
 function PrivateRoute({ children }) {
@@ -35,6 +36,7 @@ export default function App() {
       <Route path="/headcount" element={<PrivateRoute><Headcount /></PrivateRoute>} />
       <Route path="/relatorios" element={<PrivateRoute><Relatorios /></PrivateRoute>} />
       <Route path="/assistente" element={<PrivateRoute><Assistente /></PrivateRoute>} />
+      <Route path="/migrar-dados" element={<PrivateRoute><SeedData /></PrivateRoute>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   )
